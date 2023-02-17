@@ -46,3 +46,19 @@ Priority: optional
 Homepage: https://cuteos.com
 Description: CuteOS Updator.
 
+Package: neofetch
+Version: 23.03.1
+Architecture: all
+Maintainer: Floating dream, <2422586862@qq.com>
+Installed-Size: 387
+Depends: gcc
+Filename: pool/main/n/neofetch_23.03.1_all.deb
+Size: 92218
+MD5sum: d5b6f8435f4e638a5fa108f2292495bb
+SHA1: 7d85d8982ca530f224ced28c48c2b1b9976f2bb8
+SHA256: b2ce2b7027bdc22e6f14fd04c9ed0672d76d06d67114b6034eeb0655553eaebb
+Section: bash
+Priority: optional
+Homepage: https://github.com/CuteOS/neofetch
+Description: neofetch
+
