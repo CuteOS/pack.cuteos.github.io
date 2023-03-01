@@ -46,19 +46,74 @@ Priority: optional
 Homepage: https://cuteos.com
 Description: CuteOS Updator.
 
-Package: neofetch
-Version: 23.03.1
-Architecture: all
-Maintainer: Floating dream, <2422586862@qq.com>
-Installed-Size: 387
-Depends: gcc
-Filename: pool/main/n/neofetch_23.03.1_all.deb
-Size: 92218
-MD5sum: d5b6f8435f4e638a5fa108f2292495bb
-SHA1: 7d85d8982ca530f224ced28c48c2b1b9976f2bb8
-SHA256: b2ce2b7027bdc22e6f14fd04c9ed0672d76d06d67114b6034eeb0655553eaebb
-Section: bash
+Package: libxnvctrl0
+Source: nvidia-settings
+Version: 510.47.03-0ubuntu1
+Architecture: amd64
+Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
+Installed-Size: 65
+Depends: libc6 (>= 2.14), libx11-6 (>= 2:1.4.99.1), libxext6
+Filename: pool/main/n/nvidia-settings/libxnvctrl0_510.47.03-0ubuntu1_amd64.deb
+Size: 11458
+MD5sum: fa961966b93955425ecadcaacaf9eef1
+SHA1: aa6d92c4ac57f01a28567ec40df49b242fec643d
+SHA256: 2b423c6cec310a982018974646cdded0e028d3fbca56ce9fac95678d069f0cf8
+Section: libs
 Priority: optional
-Homepage: https://github.com/CuteOS/neofetch
-Description: neofetch
+Multi-Arch: same
+Description: NV-CONTROL X extension (runtime library)
+ The NV-CONTROL X extension provides a mechanism for X clients to
+ query and set configuration parameters of the NVIDIA X driver.
+ State set by the NV-CONTROL X extension is assumed to be persistent
+ only for the current server generation.
+ .
+ This package contains the shared library.
+Original-Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+
+Package: nvidia-prime
+Version: 0.8.17.1
+Architecture: all
+Maintainer: Alberto Milone <alberto.milone@canonical.com>
+Installed-Size: 53
+Depends: python3:any
+Conflicts: hybrid-graphics
+Breaks: ubuntu-drivers-common (<< 1:0.2.89)
+Replaces: hybrid-graphics
+Provides: hybrid-graphics
+Filename: pool/main/n/nvidia-prime/nvidia-prime_0.8.17.1_all.deb
+Size: 9956
+MD5sum: 8a1101736d40cac7c967448d90dfc606
+SHA1: b7813c47c4a1dfa36bc9ad076886a57eab639d51
+SHA256: 41f8608156306ccfe5989f48b2f10e589319df481dbc76c7e06d2ae0f90f7778
+Section: admin
+Priority: optional
+Description: Tools to enable NVIDIA's Prime
+ This is a set of tools which will enable
+ NVIDIA's Prime on MUXless systems.
+
+Package: nvidia-settings
+Version: 510.47.03-0ubuntu1
+Architecture: amd64
+Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
+Installed-Size: 3012
+Depends: pkg-config, screen-resolution-extra (>= 0.18~), libvdpau1, libgtk-3-0 (>= 3.0.0) | libgtk2.0-0 (>= 2.14.0), libc6 (>= 2.34), libcairo2 (>= 1.2.4), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.33.14), libjansson4 (>= 2.3), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libx11-6, libxnvctrl0, libxxf86vm1
+Conflicts: nvidia-settings-binary
+Replaces: nvidia-settings-binary
+Provides: nvidia-settings-binary
+Filename: pool/main/n/nvidia-settings/nvidia-settings_510.47.03-0ubuntu1_amd64.deb
+Size: 960088
+MD5sum: be78ee720de6a3d0168d2dcf36f345ce
+SHA1: 9eea97543062d03f2662c793edb324856081b565
+SHA256: d02628004e40a6aaab29d8662b3b1134652738018c852512ac82118f27500036
+Section: contrib/x11
+Priority: optional
+Description: Tool for configuring the NVIDIA graphics driver
+ The nvidia-settings utility is a tool for configuring the NVIDIA
+ Linux graphics driver.  It operates by communicating with the NVIDIA
+ X driver, querying and updating state as appropriate.  This
+ communication is done with the NV-CONTROL X extension.
+ .
+ Values such as brightness and gamma, XVideo attributes, temperature,
+ and OpenGL settings can be queried and configured via nvidia-settings.
+Original-Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
 
